@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Personal Calculator</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Coffee Need Calculator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Personal Calculator</h1>
+  <h1>How Much Coffee Do You Need Today?</h1>
 
-<form id="calculatorForm">
-    <!-- Add input fields here -->
-</form>
+  <p>Your name:</p>
+  <input type="text" id="userName" placeholder="e.g. Balaussa">
 
-<div id="output">
-    <!-- Results will be displayed here -->
-</div>
+  <p>How many hours have you been awake?</p>
+  <input type="number" id="hoursAwake" placeholder="e.g. 7">
 
-<script src="script.js"></script>
+  <p>How tired are you right now? (1–10)</p>
+  <input type="number" id="tirednessLevel" min="1" max="10" placeholder="e.g. 6">
+
+  <br><br>
+  <button onclick="calculateCoffee()">Calculate ☕</button>
+
+  <div id="result"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
