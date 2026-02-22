@@ -1,16 +1,45 @@
-/* Starter CSS to edit */
 body {
-    font-family: Arial, sans-serif;
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #fff9f0;
+  padding: 30px;
+  color: #333;
 }
 
 h1 {
-    text-align: center;
+  color: #6b4423;
 }
 
-#output {
-    margin-top: 20px;
-    font-weight: bold;
+p {
+  margin: 12px 0 4px 0;
+  font-size: 18px;
+}
+
+input {
+  padding: 8px;
+  font-size: 16px;
+  width: 220px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #8b5a2b;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+button:hover {
+  background-color: #a66d3b;
+}
+
+#result {
+  margin-top: 30px;
+  font-size: 22px;
+  line-height: 1.5;
+  min-height: 100px;
 }
