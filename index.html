@@ -6,20 +6,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1>Coffee Need Calculator ☕</h1>
 
-  <h1>How Much Coffee Do You Need Today?</h1>
+  <form id="coffeeForm">
+    <label>Your Name:</label>
+    <input type="text" id="name" required>
 
-  <p>Your name:</p>
-  <input type="text" id="userName" placeholder="e.g. Balaussa">
+    <label>Hours Awake:</label>
+    <input type="number" id="hours" min="0" required>
 
-  <p>How many hours have you been awake?</p>
-  <input type="number" id="hoursAwake" placeholder="e.g. 7">
+    <label>Tiredness Level (1–10):</label>
+    <input type="number" id="tiredness" min="1" max="10" required>
 
-  <p>How tired are you right now? (1–10)</p>
-  <input type="number" id="tirednessLevel" min="1" max="10" placeholder="e.g. 6">
-
-  <br><br>
-  <button onclick="calculateCoffee()">Calculate ☕</button>
+    <button type="submit">Calculate</button>
+  </form>
 
   <div id="result"></div>
 
