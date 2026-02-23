@@ -3,15 +3,11 @@
 ## 1. Project Overview
 
 **Project Name:**  
-(write your project name)
+Coffee Need Calculator ☕
 
 **What does your calculator do?**  
-(Explain in 2–3 sentences what problem you are solving and what you calculate.)
+This calculator estimates how many cups of coffee a person might need to feel more alert. It uses the number of hours someone has been awake and their tiredness level (1–10). The result is shown with a personalized message and a category: Low, Normal, or High need.
 
-Example:  
-This calculator calculates Body Mass Index (BMI) using weight and height. It also classifies the result into health categories.
-
----
 
 ## 2. Inputs
 
@@ -19,21 +15,20 @@ List and explain all inputs you used.
 
 | Input Name | Unit | What it Represents |
 |---|---|---|
-| Example: Weight | kg | User body weight |
-| Example: Height | cm | User height |
+| Example: Name        | text  | User’s name for personalization  |
+| Example: Hours Awake | hours | How long the user has been awake |
+| Example: Tiredness   | 1-10  |  How tired the user feels        |
 
 Explain in words:  
-(Why did you choose these inputs? Why are they important?)
+I chose hours awake and tiredness because before choosing my calculator, I did some research and read that these inputs are suitable for beginners and easy to use.
 
 ---
 
 ## 3. Process (Calculation Logic)
 
 **Formula or Calculation Used:**  
-(Write your formula or explain how calculation works.)
-
-Example:  
-BMI = weight / (height in meters)^2
+cups = (hours / 6) + (tiredness / 4)
+Result is rounded to the nearest whole number. Minimum is always 1 cup.
 
 **Steps:**
 1. Get input values from HTML  
@@ -49,11 +44,11 @@ Explain how your program interprets the result.
 
 Example:
 
-If BMI < 18.5 → Underweight  
-If BMI 18.5 – 24.9 → Normal  
-If BMI ≥ 25 → Overweight  
+- If cups ≤ 2 → **Low need**  
+- If cups ≤ 4 → **Normal need**  
+- If cups > 4 → **High need**
 
-Explain why you chose these ranges (if using real model, mention it).
+I chose these ranges to make the categories simple and easy to understand. 
 
 ---
 
@@ -61,43 +56,37 @@ Explain why you chose these ranges (if using real model, mention it).
 
 What does your program show to the user?
 
-- Calculated value  
-- Category or interpretation  
-- Personalized message (if used)  
-- Optional: binary output (if implemented)
-
+The program shows:  
+- Personalized message: “Hello, [Name]!”  
+- Calculated number of cups.  
+- Category (Low, Normal, High).  
+- Styled result box that looks like a calculator screen.
 ---
 
 ## 6. Edge Cases / Unusual Inputs
 
-What happens if:
-
-- User enters zero?  
-- User enters negative number?  
-- User leaves input empty?  
-
-Explain how your program handles this.
+- If user enters **0 hours** → formula still works, minimum 1 cup.  
+- If user enters **negative numbers** → not allowed (input has `min=0`).  
+- If user leaves input empty → browser shows error (`required` field).  
 
 ---
 
 ## 7. Optional Features (If You Added Any)
 
-Examples:
-- Binary conversion  
-- Extra calculations  
-- Extra UI features  
-- Validation messages  
+- Retro calculator design with neon colors.  
+- Personalized greeting with user’s name.  
+- Validation (cannot enter negative or empty values).    
 
 ---
 
 ## 8. How to Run the Project
 
-1. Download or clone repository  
-2. Open `index.html` in browser  
-3. Enter input values  
-4. Click calculate button  
+1. Download or clone the repository.  
+2. Open `index.html` in your browser.  
+3. Enter your name, hours awake, and tiredness level.  
+4. Click **Calculate**.  
+5. See your coffee recommendation!  
 
----
 
 ## 9. AI Usage (If Used)
 
