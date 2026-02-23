@@ -1,45 +1,69 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Courier New', monospace;
+  background: #111;
+  color: #fff;
   text-align: center;
-  background-color: #fff9f0;
   padding: 30px;
-  color: #333;
 }
 
 h1 {
-  color: #6b4423;
+  color: #00ffcc;
+  text-shadow: 2px 2px #000;
 }
 
-p {
-  margin: 12px 0 4px 0;
-  font-size: 18px;
+form {
+  margin: 20px auto;
+  max-width: 320px;
+  background: #222;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #00ffcc;
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #00ffcc;
 }
 
 input {
+  width: 100%;
   padding: 8px;
-  font-size: 16px;
-  width: 220px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  background: #000;
+  color: #0f0;
+  font-size: 1em;
+  text-align: center;
 }
 
 button {
-  background-color: #8b5a2b;
-  color: white;
+  margin-top: 15px;
+  padding: 12px;
+  width: 100%;
+  background: #00ffcc;
+  color: #000;
+  font-weight: bold;
   border: none;
-  padding: 12px 30px;
-  font-size: 18px;
   border-radius: 8px;
   cursor: pointer;
-  margin: 20px 0;
+  box-shadow: 0 4px #008080;
 }
 
 button:hover {
-  background-color: #a66d3b;
+  background: #00ffaa;
 }
 
 #result {
-  margin-top: 30px;
-  font-size: 22px;
-  line-height: 1.5;
-  min-height: 100px;
+  margin-top: 25px;
+  padding: 15px;
+  background: #000;
+  border: 2px solid #00ffcc;
+  border-radius: 8px;
+  font-size: 1.2em;
+  color: #0f0; /* зелёный текст как на игровом дисплее */
+  text-shadow: 0 0 5px #0f0;
 }
