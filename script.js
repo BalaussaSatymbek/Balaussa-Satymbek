@@ -1,37 +1,31 @@
-function calculateCoffee() {
-  // 1. Get input values
-  let name = document.getElementById("userName").value;
-  let hours = document.getElementById("hoursAwake").value;
-  let tiredness = document.getElementById("tirednessLevel").value;
+document.getElementById("coffeeForm").addEventListener("submit", function(event) {
+  event.preventDefault();
 
-  // 2. Convert to numbers
-  hours = Number(hours);
-  tiredness = Number(tiredness);
+  // Получаем данные
+  let name = document.getElementById("name").value;
+  let hours = Number(document.getElementById("hours").value);
+  let tiredness = Number(document.getElementById("tiredness").value);
 
-  // 3. Simple calculation
-  let cups = hours + tiredness;
+  // Простая формула: чашки = (часы / 6) + (усталость / 4)
+  let cups = Math.round((hours / 6) + (tiredness / 4));
 
-  // 4. Set maximum limit
-  if (cups > 12) {
-    cups = 12;
+  if (cups < 1) {
+    cups = 1; // минимум одна чашка
   }
 
-  // 5. Choose message based on result
-  let message = "";
-
-  if (cups <= 4) {
-    message = "Not too tired — you can probably skip coffee 😊";
-  } else if (cups <= 9) {
-    message = "Normal level — 2–4 cups should be enough ☕";
+  // Определяем категорию
+  let category;
+  if (cups <= 2) {
+    category = "Low need";
+  } else if (cups <= 4) {
+    category = "Normal need";
   } else {
-    message = "Rough day! Grab a big mug or two ☕☕";
+    category = "High need";
   }
 
-  // 6. Build final message
-  let resultText = "Hi, " + (name || "friend") + "!<br>";
-  resultText += "You probably need about <strong>" + cups + "</strong> cups of coffee today.<br>";
-  resultText += message;
-
-  // 7. Show result on the page
-  document.getElementById("result").innerHTML = resultText;
-}
+  // Выводим результат
+  document.getElementById("result").innerHTML =
+    "Hello, " + name + "!<br>" +
+    "You may need about <strong>" + cups + "</strong> cups of coffee.<br>" +
+    "Category: <strong>" + category + "</strong>";
+});
