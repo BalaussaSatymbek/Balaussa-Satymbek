@@ -92,16 +92,16 @@ The program shows:
 
 Did you use AI tools?  
 (Yes / No)
+Yes
 
 If yes, explain briefly:
-- What you asked AI for  
-- What you modified yourself  
-- What you fully understand now  
+- I asked AI for help with writing HTML, CSS, and JavaScript code.
+- I asked him to explain the code to me and what these symbols actually mean.
+- I now have a basic understanding of what a front-end developer is and what they do. Previously, I knew nothing about the functions of Java Script, HTML, and CSS. Now I fully understand what they are responsible for.
+
 
 ---
 
 ## 10. Reflection
+At school, I had a weak foundation in computer science. Now I have at least some knowledge of programming languages and am learning to work in GitHub. I also learned to be self-motivated and pushed myself, asking my classmates for help when I didn't understand something. In short, it's a new level for me.
 
-What did you learn from this assignment?
-
-(2–4 sentences)
